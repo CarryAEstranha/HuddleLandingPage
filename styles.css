@@ -1,0 +1,258 @@
+/***********************/
+/*CONFIGURAÇÕES GLOBAIS*/
+/***********************/
+
+/*GERAL*/
+*{
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+/*BACKGROUND*/
+#background{
+    background-color: hsl(256, 40%, 50%);
+    background-image: url("./assets/background-desktop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+}
+/*CONTAINER PRINCIPAL*/
+#general-container{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    margin: auto auto auto auto;
+
+    height: 100vh;
+}
+
+/*************************/
+/*CONFIGURAÇÕES DO HEADER*/
+/*************************/
+
+/*HEADER*/
+header{
+    position: relative;
+
+    margin: 0 auto 0 auto;
+    padding: 0 2rem 0 2rem;
+
+    max-width: 80rem;
+}
+/*LOGO*/
+header img{
+    margin: 0 0 2rem 0;
+
+    width: 16.5rem;
+}
+
+/***********************/
+/*CONFIGURAÇÕES DO MAIN*/
+/***********************/
+
+/*MAIN*/
+main{
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    margin: 0 auto 0 auto;
+    padding: 0 2rem 0 2rem;
+
+    max-width: 80rem;
+}
+/*ILUSTAÇÃO*/
+main section:first-child img{
+    margin: 0 4rem 0 0;
+
+    width: 43.75rem;
+}
+/*TÍTULO DO TEXTO*/
+main section:last-child h1{
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.4rem;
+}
+/*TEXTO PRINCIPAL*/
+main section:last-child p{
+    color: hsl(300, 70%, 94%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    margin: 1.5rem 0 1.5rem 0;
+}
+/*BOTÃO DE REGISTRO*/
+main section:last-child button{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: hsl(250, 40%, 50%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05rem;
+
+    border: none;
+    border-radius: 100px 100px 100px 100px;
+
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.4);
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    width: 12.5rem;
+    height: 3rem;
+}
+main section:last-child button:hover{
+    background: hsl(300, 70%, 70%);
+
+    color: rgb(255, 255, 255);
+}
+main section:last-child button span{
+    margin: -0.1rem 0 0 0;
+}
+
+/*************************/
+/*CONFIGURAÇÕES DO FOOTER*/
+/*************************/
+
+/*FOOTER*/
+footer{
+    display: flex;
+
+    justify-content: flex-end;
+
+    position: relative;
+
+    margin: 1rem auto 1rem auto;
+
+    max-width: 80rem;
+}
+/*BOTÃO*/
+footer button{
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+
+    outline: none;
+
+    margin: 0 0 0 1rem;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    width: 2.5rem;
+    height: 2.5rem;
+}
+footer button:last-child{
+    margin: 0 2rem 0 1rem;
+}
+footer button:hover{
+    border: 2px solid hsl(300, 70%, 70%);
+}
+footer button:hover img:last-child{
+    opacity: 1;
+}
+/*LOGO DOs BOTÕES*/
+footer button img{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+footer button img:last-child{
+    opacity: 0;
+
+    position: absolute;
+}
+
+/******************/
+/*AJUSTE DE FONTES*/
+/******************/
+@media(max-width: 1080px){
+    html{
+        font-size: 93.75%;
+    }
+}
+@media(max-width: 720px){
+    html{
+        font-size: 87.50%;
+    }
+}
+
+/***************/
+/*MEDIA QUERIES*/
+/***************/
+
+/*AJUSTE DE ALTURA*/
+@media(max-height: 720px){
+    /*AJUSTE A PÁGINA*/
+    #general-container{
+        height: 720px;
+    }
+}
+/*AJUSTE DE LARGURA*/
+@media(max-width: 1120px){
+    /*AJUSTE A PÁGINA*/
+    #general-container{
+        height: 800px;
+    }
+    /*AJUSTA O HEADER*/
+    header{
+        margin: 1.5rem 0 0 0;
+    }
+    /*AJUSTA O MAIN*/
+    main{
+        flex-direction: column;
+    }
+    /*ILUSTRAÇÃO DO MAIN*/
+    main img{
+        max-width: 100%;
+        height: auto;
+    }
+    /*TEXTOS DO MAIN*/
+    main section:last-child{
+        text-align: center;
+
+        margin: 2rem 0 2rem 0;
+
+        max-width: 35rem;
+    }
+    /*BOTÃO DO MAIN*/
+    main section:last-child button{
+        margin: auto;
+    }
+    /*AJUSTA O FOOTER*/
+    footer{
+        justify-content: center;
+
+        margin: 0 0 2rem 0;
+    }
+    footer button:first-child{
+        margin: 0 0 0 0;
+    }
+    footer button:last-child{
+        margin: 0 0 0 1rem;
+    }
+}
